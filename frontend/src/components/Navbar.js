@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ click }) => {
   return (
     <nav className="navbar">
       {/* logo */}
@@ -24,7 +24,7 @@ const NavBar = () => {
         </li>
       </ul>
       {/* hamburger manu */}
-      <div className="hamburger__menu">
+      <div className="hamburger__menu" onClick={click}>
         <div></div>
         <div></div>
         <div></div>

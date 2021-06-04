@@ -1,8 +1,8 @@
 import React from "react";
 import "./BackDrop.css";
 
-const BackDrop = ({ show }) => {
-  return show && <div className="backdrop"></div>;
+const BackDrop = ({ show, click }) => {
+  return show && <div className="backdrop" onClick={click}></div>;
 };
 
 export default BackDrop;
