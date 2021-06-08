@@ -9,6 +9,7 @@ export const getProductsReducer = (state = { products: [] }, action) => {
   }
 
   if (action.type === actionTypes.GET_PRODUCTS_SUCCESS) {
+    console.log(action.payload);
     return {
       loading: false,
       products: action.payload,
@@ -25,7 +26,7 @@ export const getProductsReducer = (state = { products: [] }, action) => {
   return state;
 };
 
-export const getProductsDetailsReducer = (state = { products: {} }, action) => {
+export const getProductsDetailsReducer = (state = { product: {} }, action) => {
   if (action.type === actionTypes.GET_PRODUCT_DETAILS_REQUEST) {
     return {
       loading: true,
